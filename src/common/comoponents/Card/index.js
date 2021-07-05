@@ -10,7 +10,7 @@ const Card = ({ user, onView }) => (
         </div>
         <div className="user--data">
           <h2 className="user--name">
-            {user.first_name} {user.last_name}
+            <span>{user.first_name}</span> <span>{user.last_name}</span>
           </h2>
           <a className="user--email" href={`mailto:${user.email}`}>
             {user.email}
@@ -19,6 +19,7 @@ const Card = ({ user, onView }) => (
       </HeaderCard>
       <BodyCard>
         <button
+          data-testid="user-view-button"
           type="button"
           className="user--button"
           onClick={() => onView(user)}

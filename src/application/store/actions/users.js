@@ -1,4 +1,4 @@
-import getUsers from '../../../common/services/users';
+import { getUsers } from 'common/services/users';
 import actionTypes from './types';
 
 export async function loadUsers(results) {
@@ -9,14 +9,14 @@ export async function loadUsers(results) {
   };
 }
 
-export async function updateUser(id, data) {
+export function updateUser(id, data) {
   return {
     type: actionTypes.UPDATE_USER,
     payload: { id, data }
   };
 }
 
-export async function deleteUser(id) {
+export function deleteUser(id) {
   return {
     type: actionTypes.DELETE_USER,
     payload: id
