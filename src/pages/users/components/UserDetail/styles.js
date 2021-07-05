@@ -1,12 +1,15 @@
 import styled from 'styled-components';
+import { device } from 'application/styles/mediaQueries';
+import colors from 'application/styles/colors';
 
 const FormUserData = styled.div`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 25px 0;
+  margin: 25px auto;
+
   form {
     display: flex;
     flex-flow: row wrap;
@@ -29,6 +32,9 @@ const FormUserData = styled.div`
         outline: none;
         border-bottom: 1px solid #09afdb;
       }
+      @media ${device.mobileM} {
+        margin: 15px auto;
+      }
     }
 
     .form__input-button {
@@ -39,16 +45,25 @@ const FormUserData = styled.div`
       padding: 8px 12px;
       font-size: 0.95rem;
       background: transparent;
+      @media ${device.mobileM} {
+        width: 95%;
+      }
     }
 
     & .update {
-      background-color: #09afdb;
+      background-color: ${colors.Success};
       color: #fff;
     }
 
     & .delete {
-      background-color: #dc0651;
+      background-color: ${colors.Warning};
       color: #fff;
+    }
+    @media ${device.mobileM} {
+      flex-flow: column wrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
     }
   }
 `;

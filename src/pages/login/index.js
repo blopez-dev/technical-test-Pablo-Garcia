@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import login from 'common/services/login';
 import { loginUser } from 'application/store/actions/auth';
+import FormLogin from './styles';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -16,13 +17,13 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <FormLogin>
       <form onSubmit={onSubmit}>
-        <input type="text" name="email" />
-        <input type="password" name="password" />
+        <input type="text" name="email" placeholder="Name" />
+        <input type="password" name="password" placeholder="Password" />
         <button type="submit">Entrar</button>
       </form>
-    </div>
+    </FormLogin>
   );
 };
 
