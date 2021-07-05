@@ -10,8 +10,7 @@ const Card = ({ user, onView }) => (
         </div>
         <div className="user--data">
           <h2 className="user--name">
-            {user.first_name}
-            {user.last_name}
+            {user.first_name} {user.last_name}
           </h2>
           <a className="user--email" href={`mailto:${user.email}`}>
             {user.email}
