@@ -25,8 +25,6 @@ function users(state = {}, action) {
 }
 
 export const selectUsers = (state) => state.users.data;
-/*
 export const selectUser = (id) => (state) => state.users.data?.find((user) => user.id === id);
-*/
 
 export default users;
