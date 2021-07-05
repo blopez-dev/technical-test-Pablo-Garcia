@@ -26,7 +26,7 @@ const Users = () => {
   }, []);
 
   return (
-    <UsersLayout>
+    <UsersLayout className="pepeito">
       <Listing items={users} onView={onUserView} />
       <Pane
         isOpen={isOpen}
